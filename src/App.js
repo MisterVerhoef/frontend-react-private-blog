@@ -5,7 +5,7 @@ import Homepage from "./pages/home/Homepage";
 import LoginPage from "./pages/login/Login";
 import TopMenu from './components/TopMenu';
 import './App.css';
-import BlogPost from "./components/BlogId";
+import BlogPostPage from "./components/blogId";
 
 function App() {
     // We houden in de state bij of iemand is "ingelogd" (simpele versie)
@@ -13,20 +13,24 @@ function App() {
 
     return (
 
+<>
+    <TopMenu/>
     <Switch>
+
         <Route exact path="/">
             <Homepage/>
         </Route>
         <Route path="/blogposts">
             <BlogPage/>
         </Route>
-        <Route path="/blogposts/:blogId">
-            <BlogPost/>
+        <Route exact path="/blogpost/:id">
+            <BlogPostPage/>
         </Route>
-        <Route path="/login">
+        <Route exact path="/login">
             <LoginPage/>
         </Route>
     </Switch>
+</>
 )
     ;
 }

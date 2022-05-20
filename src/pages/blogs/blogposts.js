@@ -1,13 +1,29 @@
 import React from 'react';
+import posts from '../../data/posts.json';
+import BlogPostList from "../../components/blogPostList";
+import {Link} from "react-router-dom";
+
+
 
 function BlogPage() {
 
-    return (
-        <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi autem blanditiis dolor, dolore dolorem
-            dolorum eum hic impedit inventore mollitia numquam officia placeat quasi quis repudiandae sit. Quo, rerum.
 
-        </div>
+    return (
+        <>
+            <h1>Blog overzichtspagina</h1>
+
+            <p>aantal Blog posts {posts.length}</p>
+
+            <ul>
+                {posts.map((blogpost) => {
+                    return <li key={blogpost.id}>
+                        <Link to={`blogpost/${blogpost.id}`}>
+                            {blogpost.title}</Link>
+                    </li>
+                })}
+            </ul>
+
+        </>
 
     );
 

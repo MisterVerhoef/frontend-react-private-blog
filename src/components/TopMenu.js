@@ -1,11 +1,12 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import styles from './TopMenu.module.css';
+
 
 function TopMenu() {
     return (
         <nav>
-            <div className="nav-container">
-                <h4>Test</h4>
+            <div className={styles.navBar}>
 
                 <ul>
                     <li>
@@ -13,15 +14,12 @@ function TopMenu() {
                     </li>
 
                     <li>
-                        <NavLink to="/gaatjes" activeClassName="active-link">Gaatjes</NavLink>
+                        <NavLink to="/blogposts" activeClassName="active-link">Blogposts</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/afspraak-maken" activeClassName="active-link">Afspraak maken</NavLink>
+                        <NavLink to="/login" activeClassName="active-link">Login</NavLink>
                     </li>
 
-                    <li>
-                        <NavLink to="/tanden-bleken" activeClassName="active-link">Tanden bleken</NavLink>
-                    </li>
                 </ul>
             </div>
         </nav>
