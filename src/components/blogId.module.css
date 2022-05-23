@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    color: chocolate;
+
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+
+.wholeBlogItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    position: absolute;
+
+
+}
+
+
+.blogItem {
+    display: flex;
+
+    justify-items: center;
+    flex-direction: column;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 2px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    position: relative;
+
+}
+
+.backHome {
+    display: flex;
+    border-style: solid;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin-top: 50px;
+    border-color: darkgray;
+    border-width: 2px;
+
+
+}

@@ -1,0 +1,28 @@
+h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+h3 {
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+.blogPost {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    margin: 5px;
+
+}
+
+ul {
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+a:link {
+    color: chocolate;
+}
+
