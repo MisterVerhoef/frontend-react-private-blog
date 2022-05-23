@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from "../home/Homepage.module.css"
 
 function Homepage() {
 
-    return(
+    return (
 
 
-        <div>
+        <div className={styles.homepage}>
             <h1>Home pagina</h1>
 
             <h2>Welkom op een fantastisch blogplatform</h2>

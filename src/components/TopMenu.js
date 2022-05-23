@@ -1,23 +1,34 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
 import styles from './TopMenu.module.css';
+import {NavLink, useHistory} from "react-router-dom";
 
 
-function TopMenu() {
+function TopMenu({getter, setter, auth}) {
+    const history = useHistory();
+
+    const logOutClick = (e) => {
+        setter(!getter);
+        history.push("/");
+
+    }
+
+
     return (
         <nav>
             <div className={styles.navBar}>
 
-                <ul>
+                <ul className={styles.navBarItems}>
                     <li>
                         <NavLink to="/" exact activeClassName="active-link">Home</NavLink>
                     </li>
 
                     <li>
-                        <NavLink to="/blogposts" activeClassName="active-link">Blogposts</NavLink>
+                        {auth === true ?
+                            <NavLink to="/blogposts" activeClassName="active-link">Blogposts</NavLink> : ""}
                     </li>
                     <li>
-                        <NavLink to="/login" activeClassName="active-link">Login</NavLink>
+                        {auth === true ? <button type="button" onClick={logOutClick}>Uitloggen
+                        </button> : <NavLink to="/login" activeClassName="active-link">Login</NavLink>}
                     </li>
 
                 </ul>
@@ -25,5 +36,6 @@ function TopMenu() {
         </nav>
     );
 }
+
 
 export default TopMenu;
